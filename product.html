@@ -14,14 +14,38 @@
         greenden
     </h1>
      
- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-white cursor-pointer md:hidden">
-     <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
- </svg>
+   <!-- --------------------------3 line--------- -->
+    <div onclick="toggleMenu()" class="cursor-pointer flex flex-col gap-1.5 w-7 p-2 block md:hidden">
+        <div class="w-full h-1 bg-black rounded"></div>
+        <div class="w-full h-1 bg-black rounded"></div>
+        <div class="w-full h-1 bg-black rounded"></div>
+    </div>
+ 
+
+<!-- <--------------------menu------------- -->
+<div id="mobileMenu" class="hidden flex flex-col bg-gray-200 p-4 gap-3 md:hidden shadow-md">
+    <a href="index.html" class="text-lg font-medium text-black hover:text-green-600">Home</a>
+    <a href="product.html" class="text-lg font-medium text-black hover:text-green-600">Product</a>
+    <a href="contact.html" class="text-lg font-medium text-black hover:text-green-600">Contact</a>
+</div>
+       
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById("mobileMenu");
+        // Menu open/close aakkaanulla toggle code
+        if (menu.classList.contains("hidden")) {
+            menu.classList.remove("hidden");
+        } else {
+            menu.classList.add("hidden");
+        }
+    }
+</script>
+<!-- ---------------------------window--------display------- -->
+
      <ul class ="flex space-x-4 text-xl  mr-5  hidden md:flex">
-         <li><a href="index.html">Home</a></li>
-        <li><a href="product.html">Product</a></li>
-         
-        <li><a href="contact.html ">Contact</a></li>
+          <a href="index.html" class="text-lg font-medium text-black hover:text-green-600">Home</a>
+    <a href="product.html" class="text-lg font-medium text-black hover:text-green-600">Product</a>
+    <a href="contact.html" class="text-lg font-medium text-black hover:text-green-600">Contact</a>
 </nav>
 
 <!-- -----------------------menu------ -->
